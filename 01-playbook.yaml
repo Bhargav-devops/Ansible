@@ -1,0 +1,4 @@
+- name: ping playbook
+  tasks:
+    - name: Ping the server
+      ansible.builtin.ping:

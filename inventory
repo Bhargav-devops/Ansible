@@ -1,0 +1,16 @@
+[web]
+192.187.53.2
+192.187.53.3
+
+[catalogue]
+192.187.54.2
+192.187.54.3
+
+[cart]
+192.187.55.3
+192.187.55.4
+
+[roboshop:children]
+web
+cart
+catalogue

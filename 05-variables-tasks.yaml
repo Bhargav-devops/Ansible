@@ -1,0 +1,15 @@
+#variables at tasl level
+
+- name: variables at task level
+  hosts: localhost
+  vars:
+    course: "Devops"
+    Duration: "120HRS"
+    trainer: "bhargav"
+  tasks:
+    - name: task 1 for variables overriden
+      vars:
+        course: "Devops with aws"
+        Duration: "130HRS"
+      ansible.builtin.debug:
+        msg: "I am learning {{course}} duration is {{Duration}} and trainer is {{trainer}}"

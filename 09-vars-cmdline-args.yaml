@@ -1,0 +1,8 @@
+#variables from cmd line arguments
+
+- name: variables at task level
+  hosts: localhost
+  tasks:
+    - name: task 1 for variables overriden
+      ansible.builtin.debug:
+        msg: "Hello {{Person}} very {{Wishes}}"

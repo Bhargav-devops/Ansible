@@ -1,0 +1,29 @@
+# data types in ansible
+#key-value pair , list, map, boolean
+
+- name: Data Types in ansible
+  hosts: localhost
+  vars:
+    Name: "bhargav" #key-value pair
+    Skills: #list
+      - Devops
+      - angular
+      - java
+    Experience: #map
+      Devops: 3
+      angular: 3
+      java: 3
+    Trainer: true #boolean
+    tasks:
+      - name: Key value pair
+        ansible.builtin.debug:
+          msg: "Skills {{Name}}"
+      - name: list display
+        ansible.builtin.debug:
+          msg: "Skills {{Skills}}"
+      - name: Experience map type
+        ansible.builtin.debug:
+          msg: "Experience {{Experience}}"
+      - name: trainer boolean type
+        ansible.builtin.debug:
+          msg: "Trainer {{Trainer}}"

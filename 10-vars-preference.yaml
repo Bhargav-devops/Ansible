@@ -21,4 +21,4 @@
       #   Wishes: "GM from task"
       ansible.builtin.debug:
         msg: "Hi {{Person}} Very {{Wishes}}"
-# 1. cmd 2. task 3. files 4 .prompt 5. play 6. inventory
+# 1. cmd 2. task 3. files 4 .prompt 5. play 6. inventory 7. roles

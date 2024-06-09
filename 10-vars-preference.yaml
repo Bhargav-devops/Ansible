@@ -7,13 +7,13 @@
     Wishes: "mornging from play"
   vars_files:
     - variables.yaml
-  vars_prompt:
-    - name: Person
-      prompt: Please enter the user name
-      private: false
-    - name: Wishes
-      prompt: Please enter the Wishes
-      private: false
+  # vars_prompt:
+  #   - name: Person
+  #     prompt: Please enter the user name
+  #     private: false
+  #   - name: Wishes
+  #     prompt: Please enter the Wishes
+  #     private: false
   tasks:
     - name: task variables
       # vars:

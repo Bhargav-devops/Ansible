@@ -14,16 +14,16 @@
       angular: 3
       java: 3
     Trainer: true #boolean
-    tasks:
-      - name: Key value pair
-        ansible.builtin.debug:
-          msg: "Skills {{Name}}"
-      - name: list display
-        ansible.builtin.debug:
-          msg: "Skills {{Skills}}"
-      - name: Experience map type
-        ansible.builtin.debug:
-          msg: "Experience {{Experience}}"
-      - name: trainer boolean type
-        ansible.builtin.debug:
-          msg: "Trainer {{Trainer}}"
+  tasks:
+    - name: Key value pair
+      ansible.builtin.debug:
+        msg: "Name {{Name}}"
+    - name: list display
+      ansible.builtin.debug:
+        msg: "Skills {{Skills}}"
+    - name: Experience map type
+      ansible.builtin.debug:
+        msg: "Experience {{Experience}}"
+    - name: trainer boolean type
+      ansible.builtin.debug:
+        msg: "Trainer {{Trainer}}"

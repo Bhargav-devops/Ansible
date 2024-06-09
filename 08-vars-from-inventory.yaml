@@ -1,0 +1,8 @@
+#variables from invetory
+
+- name: variables at task level
+  hosts: localhost
+  tasks:
+    - name: task 1 for variables overriden
+      ansible.builtin.debug:
+        msg: "I am learning {{Course}} duration is {{Duration}} and trainer is {{Trainer}}"

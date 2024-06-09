@@ -1,0 +1,23 @@
+# var based on preference
+
+- name: Variables preference
+  hosts: localhost
+  vars:
+    Person: "bhargav from play"
+    Wishes: "mornging from play"
+  vars_files:
+    - variables.yaml
+  vars_prompt:
+    - name: Person
+      prompt: Please enter the user name
+      private: false
+    - name: Wishes
+      prompt: Please enter the Wishes
+      private: false
+  tasks:
+    - name: task variables
+      vars:
+        Person: "bhargav from task"
+        Wishes: "GM from task"
+      ansible.builtin.debug:
+        msg: "Hi {{Person}} Very {{Wishes}}"

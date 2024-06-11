@@ -10,7 +10,7 @@
       ignore_errors: true
     - name: print the exists status code
       ansible.builtin.debug:
-        msg: "Status code {{User}}"
+        msg: "Status code {{User.rc}}"
     - name: create user
       ansible.builtin.user:
         name: roboshop

@@ -1,0 +1,17 @@
+#ansible conditions
+
+- name: ansible conditions
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: check id roboshop exists
+      ansible.builtin.command: id roboshop
+      register: User # user is a vaiable name:
+      ignore_errors: true
+    - name: print the exists status code
+      ansible.builtin.debug:
+        msg: "Status code {{User}}"
+    - name: create user
+      ansible.builtin.user:
+        name: roboshop
+      when: user.rc != 0 #condition

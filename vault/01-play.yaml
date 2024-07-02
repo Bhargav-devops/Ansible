@@ -3,3 +3,6 @@
   tasks:
     - name: Ping the server
       ansible.builtin.ping:
+    - name: this is vaulut
+      ansible.builtin.debug:
+        msg: "this vault service taking variable from group_vars folder"
